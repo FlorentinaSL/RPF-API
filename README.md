@@ -1,6 +1,7 @@
 # RPF-API
 The official API for the plugin RPFunctions.
-Made by MRCAT9898 <3
+Repo of the main plugin: https://github.com/MRCAT9898/RPFunctions
+Made by Florentina <3
 
 ## About the plugin:
 This plugin add's all the function that needs to RPF use.
