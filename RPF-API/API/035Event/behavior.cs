@@ -15,8 +15,8 @@ public class behavior : MonoBehaviour
             Player player = Player.Get(hub);
             if (player != null)
             {
-                Logger.Info($"[RPF - API Schematic]: {player.Nickname} ha toccato scp-035!, mettendo la maschera in faccia...");
-                player.SendHint("Hai indossato SCP-035!", 10);
+                Logger.Info($"[RPF - API Schematic]: {player.Nickname} Touched scp-035, Putting it on face...");
+                player.SendHint("You have scp-035 on the face!", 10);
                 if (maskRoot != null)
                 {
                     maskRoot.Destroy();

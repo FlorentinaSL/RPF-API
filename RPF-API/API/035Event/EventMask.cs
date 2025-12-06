@@ -18,7 +18,7 @@ public static class EventMask
     public static string path = Path.Combine(Main.Instance.Config.PathDir, Main.Instance.Config.SchematicMaskName);
     public static void SpawnMask()
     {
-        Logger.Info("[RPF - API Schematic]: SCP 035 si sta preparando allo spawn.");
+        Logger.Info("[RPF - API Schematic]: SCP 035 Is preparing for spawn...");
         var map = Room.Get(RoomName.Hcz079).FirstOrDefault();
         var roomPos = new RoomPosition(map);
         unitypos = roomPos.Position + new Vector3(-0.2f,1.5f,0.2f);

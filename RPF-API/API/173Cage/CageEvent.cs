@@ -18,10 +18,10 @@ public static class CageEvent
         
         if (scp173 == null)
         {
-            Logger.Info("[RPF - API Schematic]: Scp-173 NON è spawnato, la schematica non si carica.");
+            Logger.Info("[RPF - API Schematic]: Scp-173 Didn't Spawn on this round.");
             return;
         }   
-        Logger.Info("[RPF - API Schematic]: Cage 173 si sta preparando allo spawn.");
+        Logger.Info("[RPF - API Schematic]: Cage 173 API is working...");
         UnityEngine.Vector3 unityPos = new UnityEngine.Vector3(
             scp173.Position.x,
             scp173.Position.y,
@@ -36,11 +36,11 @@ public static class CageEvent
         
         if (schematic != null)
         {
-            Logger.Info("[RPF-API Schematic]: Schematica Trovata!");
+            Logger.Info("[RPF-API Schematic]: Schematic Found!");
         }
         else
         {
-            Logger.Error("[RPF-API Schematic]: Schematica NON trovata!");
+            Logger.Error("[RPF-API Schematic]: Schematic NOT Found!");
         }
     }
     

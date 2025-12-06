@@ -13,7 +13,7 @@ public static class MaskCageSpawn
 {
     public static void SpawnCage035()
     {
-        Logger.Info("[RPF - API Schematic]: Cage 035 si sta preparando allo spawn.");
+        Logger.Info("[RPF - API Schematic]: Cage 035 Is preparing for spawn...");
         string path = Path.Combine(Main.Instance.Config.PathDir, Main.Instance.Config.SchematicCage035Name);
         var map = Room.Get(RoomName.Hcz079).FirstOrDefault();
         var roompos = new RoomPosition(map);

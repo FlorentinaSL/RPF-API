@@ -10,7 +10,7 @@ public class Main : Plugin<Config>
     public static Main Instance { get; private set; } 
     
     public override string Name { get; } = "RPF-API";
-    public override string Description { get; } = "Plugin che serve all'API per RPFunctions";
+    public override string Description { get; } = "API that need for RPFunctions Plugin";
     public override string Author { get; } = "Mr.Cat <3";
     public override Version Version { get; } = new Version(1,0,0);
     public override Version RequiredApiVersion { get; } = new Version(1,1,4);
@@ -23,7 +23,7 @@ public class Main : Plugin<Config>
         Logger.Info("==== RPF | Build | API ====");
         Logger.Info("Status: [VALID]");
         Logger.Info("Version: 1.0.0");
-        Logger.Info("Badge: Purgatorium version <3");
+        Logger.Info("Badge: None");
         Logger.Info("===========================");    
         
         Logger.Info("[RPF-API Status]: API Is avaible.");
@@ -31,7 +31,7 @@ public class Main : Plugin<Config>
 
     public override void Disable()
     {
-        Logger.Info("[RPF-API]: API si stà disabilitando...");
+        Logger.Info("[RPF-API]: API Is disabling...");
     }
     
     public void CreateDirectorySchematic()
@@ -47,13 +47,13 @@ public class Main : Plugin<Config>
                 }
                 else
                 {
-                    Logger.Info("[RPFapi - Directory]: Creazione della cartella.");
+                    Logger.Info("[RPFapi - Directory]: Building The directory...");
                     Directory.CreateDirectory(fullPath);
                 }
             }
             catch (Exception ex)
             {
-                Logger.Error("[RPFapi - Directory]: Errore nella cartella: " + ex);
+                Logger.Error("[RPFapi - Directory]: Error building Directory (hint: Modify the pathDir config if it is set to default): " + ex);
             }
         }
     }
