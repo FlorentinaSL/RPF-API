@@ -4,8 +4,8 @@ namespace RPF_API;
 
 public class Config
 {
-    [Description("==== [Schematics] ====")]
-    public string PathDir { get; set; } = @"Example path\RPF-Schematics or /RPF-Schematics if you are on Linux";
+    [Description("==== [Schematics | Don't change PathDir] ====")]
+    public string PathDir { get; set; }
     public string SchematicCageName { get; set; } = "173Cage";
     public string SchematicMaskName { get; set; } = "035Mask";
     public string SchematicCage035Name { get; set; } = "035Cage";

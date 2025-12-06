@@ -12,7 +12,7 @@ public class Main : Plugin<Config>
     public override string Name { get; } = "RPF-API";
     public override string Description { get; } = "API that need for RPFunctions Plugin";
     public override string Author { get; } = "Florentina <3";
-    public override Version Version { get; } = new Version(1,0,0);
+    public override Version Version { get; } = new Version(1,1,0);
     public override Version RequiredApiVersion { get; } = new Version(1,1,4);
     
     public override void Enable()
@@ -38,17 +38,20 @@ public class Main : Plugin<Config>
     {
         if (Main.Instance.Config != null)
         {
-            string fullPath = Path.Combine(Main.Instance.Config.PathDir);
+            string schematicsDir = string.IsNullOrEmpty(Main.Instance.Config.PathDir)
+                ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    "SCP Secret Laboratory", "LabAPI", "configs", "RPF-Schematics")
+                : Main.Instance.Config.PathDir;
             try
             {
-                if (Directory.Exists(fullPath))
+                if (Directory.Exists(schematicsDir))
                 {
                     return;
                 }
                 else
                 {
-                    Logger.Info($"[RPFapi - Directory]: Building The directory in: {fullPath}");
-                    Directory.CreateDirectory(fullPath);
+                    Logger.Info($"[RPFapi - Directory]: Building The directory in: {schematicsDir}");
+                    Directory.CreateDirectory(schematicsDir);
                 }
             }
             catch (Exception ex)
