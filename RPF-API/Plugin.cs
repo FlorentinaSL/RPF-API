@@ -11,7 +11,7 @@ public class Main : Plugin<Config>
     
     public override string Name { get; } = "RPF-API";
     public override string Description { get; } = "API that need for RPFunctions Plugin";
-    public override string Author { get; } = "Mr.Cat <3";
+    public override string Author { get; } = "Florentina <3";
     public override Version Version { get; } = new Version(1,0,0);
     public override Version RequiredApiVersion { get; } = new Version(1,1,4);
     
