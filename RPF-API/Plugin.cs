@@ -47,7 +47,7 @@ public class Main : Plugin<Config>
                 }
                 else
                 {
-                    Logger.Info("[RPFapi - Directory]: Building The directory...");
+                    Logger.Info($"[RPFapi - Directory]: Building The directory in: {fullPath}");
                     Directory.CreateDirectory(fullPath);
                 }
             }
