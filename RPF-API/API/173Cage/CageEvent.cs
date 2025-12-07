@@ -13,9 +13,10 @@ public static class CageEvent
     public static void SpawnCage()
     {
         Player scp173 = Player.List.FirstOrDefault(p => p.Role == RoleTypeId.Scp173);
-        string schematicName = Main.Instance.Config.SchematicCageName;
+        string schematicName = Main.Instance.Config.Schematic173CageName;
         string fullPath = Path.Combine(Main.Instance.Config.PathDir, schematicName);
         
+        if (!Main.Instance.Config.Schematic173Cage) return;
         if (scp173 == null)
         {
             Logger.Info("[RPF - API Schematic]: Scp-173 Didn't Spawn on this round.");

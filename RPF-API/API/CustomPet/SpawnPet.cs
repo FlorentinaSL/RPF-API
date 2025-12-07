@@ -10,6 +10,7 @@ public static class SpawnPet
     //Custom Pet =)
     public static void SpawnCustomPet049(Player player)
     {
+        if (!Main.Instance.Config.SchematicPet049) return;
         string Name = Path.Combine(Main.Instance.Config.PathDir, Main.Instance.Config.SchematicPet049Name);
         Vector3 targetpos = new Vector3(player.Position.x, player.Position.y, player.Position.z);
         var schematic = ObjectSpawner.SpawnSchematic(
