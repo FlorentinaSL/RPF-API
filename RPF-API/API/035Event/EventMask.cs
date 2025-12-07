@@ -13,7 +13,6 @@ namespace RPF_API.API._035Event;
 public static class EventMask
 {
     public static SchematicObject CurrentMask;
-    public static Vector3 unitypos = new Vector3(0,0,0);
     public static string PathToMask;
 
     public static void Init()
@@ -36,7 +35,7 @@ public static class EventMask
         Logger.Info("[RPF - API Schematic]: SCP 035 Is preparing for spawn...");
         var map = Room.Get(RoomName.Hcz079).FirstOrDefault();
         var roomPos = new RoomPosition(map);
-        unitypos = roomPos.Position + new Vector3(-0.2f,1.5f,0.2f);
+        var unitypos = roomPos.Position + new Vector3(-0.2f,1.5f,0.2f);
     
         CurrentMask = ObjectSpawner.SpawnSchematic(
             PathToMask,
