@@ -25,19 +25,23 @@ public static class MaskCageSpawn
     public static void SpawnCage035()
     {
         Logger.Info("[RPF - API Schematic]: Cage 035 Is preparing for spawn...");
-        var map = Room.Get(RoomName.Hcz079).FirstOrDefault();
-        var roompos = new RoomPosition(map);
-        
-        Vector3 unitypos = new Vector3(
-            map.Position.x,
-            map.Position.y,
-            map.Position.z
-        );
+        var map = Room.Get(Main.Instance.Config.Scp035SpawnRoom).FirstOrDefault();
+        if (map == null)
+        {
+            Logger.Warn("[RPF - API Schematic]: Spawn room not found, aborting.");
+            return;
+        }
+
+        Vector3 unitypos = Main.Instance.Config.Scp035SpawnPosition == Vector3.zero
+            ? new Vector3(map.Position.x, map.Position.y, map.Position.z)
+            : Main.Instance.Config.Scp035SpawnPosition;
+
         var schematic = ObjectSpawner.SpawnSchematic(
             PathToMask,
             unitypos,
             Quaternion.identity
         );
+        Logger.Info("[RPF - API Schematic]: Cage 035 spawned successfully.");
     }
     
 }

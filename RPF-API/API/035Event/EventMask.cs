@@ -33,10 +33,25 @@ public static class EventMask
             return;
         }
         Logger.Info("[RPF - API Schematic]: SCP 035 Is preparing for spawn...");
-        var map = Room.Get(RoomName.Hcz079).FirstOrDefault();
-        var roomPos = new RoomPosition(map);
-        var unitypos = roomPos.Position + new Vector3(-0.2f,1.5f,0.2f);
-    
+        
+        if (string.IsNullOrEmpty(PathToMask))
+        {
+            Logger.Error("[RPF - API] ERROR: PathToMask is NULL. Did you call Init()?");
+            return;
+        }
+        Logger.Info("[RPF - API Schematic]: SCP-035 Mask Is preparing for spawn...");
+
+        var map = Room.Get(Main.Instance.Config.Scp035MaskSpawnRoom).FirstOrDefault();
+        if (map == null)
+        {
+            Logger.Warn("[RPF - API Schematic]: Spawn room not found, aborting.");
+            return;
+        }
+
+        Vector3 unitypos = Main.Instance.Config.Scp035MaskSpawnPosition == Vector3.zero
+            ? new Vector3(map.Position.x, map.Position.y, map.Position.z)
+            : Main.Instance.Config.Scp035MaskSpawnPosition;
+        
         CurrentMask = ObjectSpawner.SpawnSchematic(
             PathToMask,
             unitypos,
@@ -56,8 +71,8 @@ public static class EventMask
                 var bh = go.AddComponent<behavior>();
                 bh.maskRoot = CurrentMask;
             }
-                
         }
+        Logger.Info("[RPF - API Schematic]: SCP-035 Mask spawned successfully.");
     }
     
 }

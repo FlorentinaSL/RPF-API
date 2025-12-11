@@ -144,3 +144,4 @@ C:\Users\ciste\RiderProjects\RPF-API\RPF-API\obj\Debug\RPF-API.csproj.CoreCompil
 C:\Users\ciste\RiderProjects\RPF-API\RPF-API\obj\Debug\RPF-API.csproj.Up2Date
 C:\Users\ciste\RiderProjects\RPF-API\RPF-API\obj\Debug\RPF_API.dll
 C:\Users\ciste\RiderProjects\RPF-API\RPF-API\obj\Debug\RPF_API.pdb
+C:\Users\ciste\RiderProjects\RPF-API\RPF-API\bin\Debug\AudioPlayerApi.dll

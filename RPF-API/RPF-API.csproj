@@ -40,6 +40,9 @@
         <Reference Include="Assembly-CSharp-firstpass">
           <HintPath>..\..\..\Downloads\References\Assembly-CSharp-firstpass.dll</HintPath>
         </Reference>
+        <Reference Include="AudioPlayerApi">
+          <HintPath>..\..\..\Desktop\b\AudioPlayerApi.dll</HintPath>
+        </Reference>
         <Reference Include="BouncyCastle.Cryptography">
           <HintPath>..\..\..\Downloads\References\BouncyCastle.Cryptography.dll</HintPath>
         </Reference>
@@ -472,6 +475,7 @@
         <Compile Include="API\173Cage\CageEvent.cs" />
         <Compile Include="API\CustomPet\behavior.cs" />
         <Compile Include="API\CustomPet\SpawnPet.cs" />
+        <Compile Include="API\FemurBreaker\Femur.cs" />
         <Compile Include="Config.cs" />
         <Compile Include="Internal-API-NOTUSE\RoomPosition.cs" />
         <Compile Include="Plugin.cs" />
